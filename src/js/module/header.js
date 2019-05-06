@@ -6,13 +6,20 @@ define(["tools"], (tools)=>{
             //规定：header标签加载header模块
             this.container=document.querySelector("header");
             this.load();
-            console.log(this.container);
         }
         load (){
             //加载header.html
-            tools.ajaxGetPromise("html/module/header.html",null,false).then(data=>{
-                console.log(data);
+            tools.ajaxGetPromise("html/module/header.html",null,false).then(html=>{
+                this.container.innerHTML =html;
+                //数据返回，header.html加载结束后才能运行交互
+                this.nav();
+                console.log(1111)                
             })
+        }
+        nav(){
+            this.container.querySelector("h1").onclick=function(){
+                alert(this.innerHTML);
+            }
         }
     }
     return new Header();

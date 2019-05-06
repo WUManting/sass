@@ -1,0 +1,13 @@
+header{
+    width: 1000px;
+    height: 50px;
+    h1{
+        color: dodgerblue;
+        &:hover{
+            background: brown;
+        }
+        &>a{
+            color: red;
+        }
+    }
+}

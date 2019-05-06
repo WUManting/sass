@@ -1,0 +1,11 @@
+header {
+  width: 1000px;
+  height: 50px; }
+  header h1 {
+    color: dodgerblue; }
+    header h1:hover {
+      background: brown; }
+    header h1 > a {
+      color: red; }
+
+/*# sourceMappingURL=index.css.map */
